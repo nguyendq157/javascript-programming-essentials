@@ -3,41 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Travel Bloom</title>
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <nav>
-    <div class="logo">TravelBloom</div>
-    <ul>
-      <li><a href="/html/index.html">Home Page</a></li>
-      <li><a href="/html/aboutus.html">About Us</a></li>
-      <li><a href="/html/contactus.html">Contact Us</a></li>
-    </ul>
-    <div class="search-area">
-        <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
-        <button onclick="searchDestination()">Search</button>
-        <button onclick="clearSearch()">Clear</button>
+  <div class="global-nav">
+    <div class="logo">
+      <i class="fa fa-plane" style="font-size:32px;">TravelBloom</i>
     </div>
-  </nav>
-  <nav>
-    <div class="social-icons">
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-youtube"></a>
+    <div class="navigation">
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
     </div>
-    <article>
-      <h1>EXPLORE DREAM DESTINATION</h1>
-      <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination athat captivates the heart and ignites a sense of wonder.</p>
-    </article>
-  </nav>
-  <footer>
-    <div>
-        <button>BOOK NOW</button>
+    <div class="search-section">
+      <input class="search-text" type="text" id="searchInput" placeholder="Enter a destination or keyword">
+      <button onclick="searchDestination()">Search</button>
+      <button onclick="clearSearch()">Clear</button>
     </div>
-  </footer>
-
-  <script src="/js/index.js"></script>
+  </div>
+  <div class="main-content">
+    <div class="main">
+      <div class="article">
+        <div class="side-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+        <div class="content">
+          <h1>EXLORE DREAM DESTINATION</h1>
+          <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+        </div>
+      </div>
+      <div class="recommend">
+      </div>
+    </div>
+    <div class="footer">
+      <button>BOOK NOW</button>
+    </div>
+  </div>
+  <script src="../js/index.js"></script>
 </body>
 </html>
