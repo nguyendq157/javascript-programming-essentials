@@ -9,12 +9,13 @@ body {
     background-color: #333;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
     padding: 10px 20px;
   }
   .logo {
     text-align: center;
-    
   }
   .global-nav ul{
     list-style: none;
@@ -25,10 +26,21 @@ body {
     color: white;
     text-decoration: none;
   }
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
 
+.navigation ul li a.active {
+  color: #4CAF50;
+  font-weight: bold;
+  border-bottom: 2px solid #4CAF50;
+}
   .search-section {
     text-align: center;
-    margin: 10px 0;
+    margin: 10px;
+    margin-left: 50px;
   }
 
   .search-section input {
@@ -81,7 +93,7 @@ body {
     background-image: url('https://image.newyork.co.uk/wp-content/uploads/2024/07/What-to-do-in-New-York-the-best-attractions-Helicopter-Flight.jpg.webp');
     background-size: cover;
     color: white;
-    padding: 200px 20px;
+    padding: 90px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -102,6 +114,10 @@ body {
   flex: 1;
   padding: 20px;
   border-radius: 8px;
+
+  height: 500px;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 .article h1 {
   font-size: 60px;
@@ -122,12 +138,92 @@ body {
 .recommend {
   display: none;
   flex: 1;
-  background-color: #f0f0f0;
-  padding: 50px;
+  border-radius: 12px;
+}
+.recommend h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.recommend-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+.card button {
+  background-color: rgb(58, 130, 130);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  
 }
 .footer {
   width: 100%;
   text-align: left;
   margin-top: auto;
   padding: 50px;
+}
+
+.content_about {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex: 1;
+  overflow-y: auto;
+}
+.about-text {
+  flex: 1;
+}
+.teams{
+  flex: 1
+}
+.team-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.team-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  text-wrap: break-word;
+}
+
+.team-card img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
