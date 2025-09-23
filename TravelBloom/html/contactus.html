@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Bloom</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="global-nav">
+    <div class="logo">
+      <i class="fa fa-plane" style="font-size:32px;">TravelBloom</i>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="../html/aboutus.html">About Us</a></li>
+        <li><a href="../html/contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="main">
+      <div class="article">
+        <div class="side-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+        <div class="contact-us">
+            <h2 class="contact-heading">CONTACT US</h2>
+            <form class="info-form" onsubmit="submitMessage(event)">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+                <label for="message">Message</label>
+                <textarea class="message" id="message" required placeholder="Enter your message"></textarea>
+                <br>
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Your message has been sent successfully!</p>
+    </div>
+    </div>
+  <script src="../js/index.js"></script>
+</body>
+</html>

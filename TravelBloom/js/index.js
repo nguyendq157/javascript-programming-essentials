@@ -37,6 +37,27 @@ const recommendations = {
   }
 };
 
+const teamMembers = [
+  {
+    name: "John Doe",
+    position: "CEO",
+    profile: "John Doe is responsible for abc xyz.",
+    image: "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    name: "Celina Thomas",
+    position: "Team Lead",
+    profile: "Celina Thomas is responsible for abc test.",
+    image: "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    name: "Mike Tyson",
+    position: "Marketing Specialist",
+    profile: "Mike Tyson is responsible for abc def",
+    image: "https://randomuser.me/api/portraits/men/3.jpg"
+  }
+];
+
 function searchDestination() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
   const recommendDiv = document.querySelector(".recommend");
@@ -80,4 +101,35 @@ function clearSearch() {
   const recommendDiv = document.querySelector(".recommend");
   recommendDiv.style.display = "none";
   recommendDiv.innerHTML = "";
+}
+
+function loadMember() {
+    const teamGrid = document.querySelector(".team-grid");
+    let html = "";
+
+    teamMembers.forEach(item => {
+      html += `
+        <div class="team-card">
+            <img src="${item.image}">
+            <h4>${item.name}</h4>
+            <p>${item.profile.length < 35 ? item.profile : item.profile.substring(0, 35) + "..."}</p>
+            <label>${item.position}</label>
+        </div>
+      `;
+    });
+
+    teamGrid.innerHTML = html;
+}
+window.onload = function () {
+  if (window.location.pathname.includes("aboutus.html")) {
+    loadMember();
+  }
+};
+
+function submitMessage(event) {
+    event.preventDefault();
+    document.getElementById("modal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
 }
